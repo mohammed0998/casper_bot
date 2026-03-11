@@ -106,7 +106,7 @@ let handler = async (m, { conn, usedPrefix, command, args }) => {
    for (let b of objek) {
     totalHit += b
     }
-  let docUrl = 'https://telegra.ph/file/e601537d315cbc69b856b.jpg'
+  let docUrl = ''
   let help = Object.values(global.plugins).filter(plugin => !plugin.disabled).map(plugin => {
     return {
       help: Array.isArray(plugin.tags) ? plugin.help : [plugin.help],
@@ -142,7 +142,7 @@ let headers = `إعتبرني : رفيقتك ، أستاذتك ،عزيزتك ،
     let mpt = clockString(_mpt)
     let name = m.pushName || conn.getName(m.sender)
     let list = `${headers}${readMore}\n╭──「 LIST MENU 」\n│※ ${usedPrefix + command} all\n│※ ${daftarTag}\n╰──────────•`
- const pp = await conn.profilePictureUrl(m.sender, 'image').catch((_) => "https://telegra.ph/file/1ecdb5a0aee62ef17d7fc.jpg");
+ const pp = await conn.profilePictureUrl(m.sender, 'image').catch((_) => "");
 if (_menu.image) {
 
 conn.sendMessage(m.chat, {
@@ -160,7 +160,7 @@ conn.sendMessage(m.chat, {
       } else if (_menu.gif) {
 
 conn.sendMessage(m.chat, {
-      video: {url: "https://telegra.ph/file/ca2d038b71ff86e2c70d3.mp4"},
+      video: {url: ""},
       gifPlayback: true,
       caption: list,
       jpegThumbnail: await conn.resize((await conn.getFile(docUrl)).data, 180, 72),
@@ -191,7 +191,7 @@ conn.sendMessage(m.chat, {
               externalAdReply: {
                 containsAutoReply: true,
                 mediaType: 1,
-                mediaUrl: 'https://telegra.ph/file/74abb87ac6082571db546.jpg',
+                mediaUrl: '',
                 renderLargerThumbnail: true,
                 showAdAttribution: true,
                 sourceUrl: sgc,
@@ -216,7 +216,7 @@ conn.sendMessage(m.chat, {
         const readMore = more.repeat(4001)
         
     const list2 =  `${headers}${readMore}╭──「 MENU ${cmd.toUpperCase()} 」\n├──────────────\n│※ ${daftarHelp}\n╰──────────•\n\n*Total menu ${cmd}: ${tagHelpMapping[cmd].length}*`
-     const pp = await conn.profilePictureUrl(m.sender, 'image').catch((_) => "https://telegra.ph/file/1ecdb5a0aee62ef17d7fc.jpg");
+     const pp = await conn.profilePictureUrl(m.sender, 'image').catch((_) => "");
 if (_menu.image) {
 
 conn.sendMessage(m.chat, {
@@ -235,7 +235,7 @@ conn.sendMessage(m.chat, {
       } else if (_menu.gif) {
 
 conn.sendMessage(m.chat, {
-      video: {url: "https://telegra.ph/file/ca2d038b71ff86e2c70d3.mp4"},
+      video: {url: ""},
       gifPlayback: true,
       caption: list2,
       contextInfo: {
@@ -265,7 +265,7 @@ conn.sendMessage(m.chat, {
               externalAdReply: {
                 containsAutoReply: true,
                 mediaType: 1,
-                mediaUrl: 'https://telegra.ph/file/74abb87ac6082571db546.jpg',
+                mediaUrl: '',
                 renderLargerThumbnail: true,
                 showAdAttribution: true,
                 sourceUrl: sgc,
@@ -291,7 +291,7 @@ conn.sendMessage(m.chat, {
       return`╭──「 MENU ${tag.toUpperCase()} 」\n├──────────────\n│※ ${daftarHelp}\n╰──────────•`;
     }).join('\n');
     let all =  `${headers}${readMore}\n${allTagsAndHelp}\n${wm}`
-    const pp = await conn.profilePictureUrl(m.sender, 'image').catch((_) => "https://telegra.ph/file/1ecdb5a0aee62ef17d7fc.jpg");
+    const pp = await conn.profilePictureUrl(m.sender, 'image').catch((_) => "");
     if (_menu.image) {
 
 conn.sendMessage(m.chat, {
@@ -309,7 +309,7 @@ conn.sendMessage(m.chat, {
       } else if (_menu.gif) {
 
 conn.sendMessage(m.chat, {
-      video: {url: "https://telegra.ph/file/ca2d038b71ff86e2c70d3.mp4"},
+      video: {url: ""},
       gifPlayback: true,
       caption: all,
       contextInfo: {
@@ -339,7 +339,7 @@ conn.sendMessage(m.chat, {
               externalAdReply: {
                 containsAutoReply: true,
                 mediaType: 1,
-                mediaUrl: 'https://telegra.ph/file/74abb87ac6082571db546.jpg',
+                mediaUrl: '',
                 renderLargerThumbnail: true,
                 showAdAttribution: true,
                 sourceUrl: sgc,
